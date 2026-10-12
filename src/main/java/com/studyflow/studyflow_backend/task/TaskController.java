@@ -22,7 +22,8 @@ import org.springframework.web.server.ResponseStatusException;
 @RequestMapping("/api/tasks")
 @CrossOrigin(origins = {
     "http://localhost:5173",
-    "http://localhost:5174"
+    "http://localhost:5174",
+    "https://studyflow-frontend-phi.vercel.app"
 })
 public class TaskController {
 
