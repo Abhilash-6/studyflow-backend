@@ -12,4 +12,6 @@ COPY src ./src
 
 RUN ./mvnw -B package -DskipTests
 
-CMD ["java", "-jar", "target/studyflow-backend-0.0.1-SNAPSHOT.jar"]
+EXPOSE 8080
+
+CMD ["sh", "-c", "java -Dserver.port=${PORT:-8080} -jar target/studyflow-backend-0.0.1-SNAPSHOT.jar"]
